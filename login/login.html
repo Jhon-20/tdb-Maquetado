@@ -24,222 +24,218 @@
   </head>
   <body>
     <div class="container-card">
-      <div class="container-forms">
+      <div class="container-forms-login">
         <div class="logo mar-bot">
           <img src="../img/logo.png" alt="" />
         </div>
-        <div>
-          <form
-            id=""
-            action="JavaScript:void(0);"
-            class="localAccount"
-            aria-label="Iniciar sesión con su nombre de usuario"
-          >
-            <div
-              class="error pageLevel"
-              aria-hidden="false"
-              role="alert"
-              style="display: none"
-            >
-              <p>Parece que no podemos encontrar su cuenta.</p>
-            </div>
-            <div class="row">
-              <div class="entry-item form-floating col-12 col-md-6 mar-bot">
-                <select
-                  class="form-select"
-                  id="type_document"
-                  style="padding-top: 18px; padding-bottom: 18px"
-                >
-                  <option selected="" disabled="" value="">
-                    Tipo de documento
-                  </option>
-                  <option value="dni_">DNI</option>
-                  <option value="ext_">Carnet de Extranjeria</option>
-                </select>
-              </div>
-              <div class="col-12 col-md-6 mar-bot">
-                <div>
-                  <div class="entry-item form-floating">
-                    <input
-                      type="text"
-                      id="tdp_input_nrodocumento"
-                      class="form-control nro_document"
-                      placeholder="Nro. de documento"
-                    />
-                    <label class="form-label" for="tdp_input_nrodocumento"
-                      >Nro. de documento</label
-                    >
-                  </div>
-                  <div
-                    class="error itemLevel"
-                    aria-hidden="true"
-                    role="alert"
-                    style="display: none"
-                  >
-                    <p></p>
-                  </div>
-                  <input
-                    style="display: none"
-                    type="text"
-                    id="UserId"
-                    name="Nombre de usuario"
-                    title="Escriba un valor de Nombre de usuario válido."
-                    pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$"
-                    autofocus=""
-                    placeholder="Nombre de usuario"
-                    aria-label="Nombre de usuario"
-                  />
-                </div>
-              </div>
-            </div>
 
-            <div class="d-flex justify-content-center row mar-bot">
-              <div class="col-12">
-                <div class="form-floating md-form p-0">
+        <form
+          id=""
+          action="JavaScript:void(0);"
+          class="localAccount"
+          aria-label="Iniciar sesión con su nombre de usuario"
+        >
+          <div
+            class="error pageLevel"
+            aria-hidden="false"
+            role="alert"
+            style="display: none"
+          >
+            <p>Parece que no podemos encontrar su cuenta.</p>
+          </div>
+          <div class="row">
+            <div class="entry-item form-floating col-12 col-md-6 mar-bot">
+              <select
+                class="form-select"
+                id="type_document"
+                style="padding-top: 18px; padding-bottom: 18px"
+              >
+                <option selected="" disabled="" value="">
+                  Tipo de documento
+                </option>
+                <option value="dni_">DNI</option>
+                <option value="ext_">Carnet de Extranjeria</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6 mar-bot">
+              <div>
+                <div class="entry-item form-floating">
                   <input
                     type="text"
-                    id="password"
-                    class="form-control tdp_input_password"
-                    name="Contraseña"
-                    placeholder="Contraseña"
-                    aria-label="Contraseña"
-                    autocomplete="current-password"
-                    aria-required="true"
+                    id="tdp_input_nrodocumento"
+                    class="form-control nro_document"
+                    placeholder="Nro. de documento"
                   />
-                  <label class="form-label" for="password">Contraseña</label>
-                  <span class="icon-see" id="icon_see_passsword">
-                    <i
-                      class="far fa-lg fa-eye-slash"
-                      id="togglePassword"
-                      style="cursor: pointer"
-                    ></i>
-                  </span>
+                  <label class="form-label" for="tdp_input_nrodocumento"
+                    >Nro. de documento</label
+                  >
                 </div>
                 <div
                   class="error itemLevel"
                   aria-hidden="true"
+                  role="alert"
                   style="display: none"
                 >
-                  <p role="alert"></p>
+                  <p></p>
                 </div>
+                <input
+                  style="display: none"
+                  type="text"
+                  id="UserId"
+                  name="Nombre de usuario"
+                  title="Escriba un valor de Nombre de usuario válido."
+                  pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$"
+                  autofocus=""
+                  placeholder="Nombre de usuario"
+                  aria-label="Nombre de usuario"
+                />
               </div>
             </div>
-            <div class="row d-flex justify-content-center mar-bot">
-              <div class="col-12 col-md-6">
-                <table class="table">
-                  <tbody class="">
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          7
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          8
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          9
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          4
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          5
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          6
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          1
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          2
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          3
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn pl-0 pr-0 btn-block">
-                          <i class="fas fa-backspace"></i>
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-block form-control"
-                        >
-                          0
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-block">
-                          <i class="fas fa-broom"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          </div>
 
-            <div class="working" style="display: none"></div>
-            <div class="d-flex justify-content-center mar-bot">
-              <p class="olvido_contraseña">
-                <a
-                  id="forgotPassword"
-                  href="/tdpsynopsis.onmicrosoft.com/B2C_1_tdpsynspring/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPassword&amp;csrf_token=M2JCRzVDMG1Rc2pqdnYrbGtNNDQ1cG9pL1Y4Mk1ZdzJ6L1dIVFpQeXB0YUxlZHBzL0hpRFdCNnZoUDJZVGU5UzExOXlzVGlGUVRTbzkyNWFaamsrK3c9PTsyMDIyLTA4LTA1VDIwOjI1OjAzLjM1NzI5NjVaO1lmS0tzeE4yRUE0NWZNSnJOOGJzNVE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI4ZTgzMzY2MC00MmEzLTQ5MzAtYjk1Zi1hNjk0YjAyY2ZlMmUifQ&amp;p=B2C_1_tdpsynspring"
-                  >¿Olvidó su contraseña?</a
-                >
-              </p>
-            </div>
-            <div class="buttons row d-flex justify-content-center mar-bot">
-              <button
-                type="button"
-                id="next"
-                class="btn btn-rounded col-md-6 col-11 tdp_sign bg-blue btn-inicia-session"
-                form="localAccountForm"
+          <div class="d-flex justify-content-center row mar-bot">
+            <div class="col-12">
+              <div class="form-floating md-form p-0">
+                <input
+                  type="text"
+                  id="password"
+                  class="form-control tdp_input_password"
+                  name="Contraseña"
+                  placeholder="Contraseña"
+                  aria-label="Contraseña"
+                  autocomplete="current-password"
+                  aria-required="true"
+                />
+                <label class="form-label" for="password">Contraseña</label>
+                <span class="icon-see" id="icon_see_passsword">
+                  <i
+                    class="far fa-lg fa-eye-slash"
+                    id="togglePassword"
+                    style="cursor: pointer"
+                  ></i>
+                </span>
+              </div>
+              <div
+                class="error itemLevel"
+                aria-hidden="true"
+                style="display: none"
               >
-                Iniciar Session
-              </button>
+                <p role="alert"></p>
+              </div>
             </div>
+          </div>
+          <div class="row d-flex justify-content-center mar-bot">
+            <div class="col-12 col-md-6">
+              <table class="table">
+                <tbody class="">
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        7
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        8
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        9
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        4
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        5
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        6
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        1
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        2
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        3
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn pl-0 pr-0 btn-block">
+                        <i class="fas fa-backspace"></i>
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-block form-control">
+                        0
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-block">
+                        <i class="fas fa-broom"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-            <div class="d-flex justify-content-center">
-              <p class="registrate">
-                <span>Si no tienes una cuenta,</span>
-                <!-- <a
+          <div class="working" style="display: none"></div>
+          <div class="d-flex justify-content-center mar-bot">
+            <p class="olvido_contraseña">
+              <a
+                id="forgotPassword"
+                href="/tdpsynopsis.onmicrosoft.com/B2C_1_tdpsynspring/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPassword&amp;csrf_token=M2JCRzVDMG1Rc2pqdnYrbGtNNDQ1cG9pL1Y4Mk1ZdzJ6L1dIVFpQeXB0YUxlZHBzL0hpRFdCNnZoUDJZVGU5UzExOXlzVGlGUVRTbzkyNWFaamsrK3c9PTsyMDIyLTA4LTA1VDIwOjI1OjAzLjM1NzI5NjVaO1lmS0tzeE4yRUE0NWZNSnJOOGJzNVE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI4ZTgzMzY2MC00MmEzLTQ5MzAtYjk1Zi1hNjk0YjAyY2ZlMmUifQ&amp;p=B2C_1_tdpsynspring"
+                >¿Olvidó su contraseña?</a
+              >
+            </p>
+          </div>
+          <div class="buttons row d-flex justify-content-center mar-bot">
+            <button
+              type="button"
+              id="next"
+              class="btn btn-rounded col-md-6 col-11 tdp_sign bg-blue btn-inicia-session"
+              form="localAccountForm"
+            >
+              Iniciar Session
+            </button>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <p class="registrate">
+              <span>Si no tienes una cuenta,</span>
+              <!-- <a
                   id="forgotPassword"
                   href="/tdpsynopsis.onmicrosoft.com/B2C_1_tdpsynspring/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPassword&amp;csrf_token=M2JCRzVDMG1Rc2pqdnYrbGtNNDQ1cG9pL1Y4Mk1ZdzJ6L1dIVFpQeXB0YUxlZHBzL0hpRFdCNnZoUDJZVGU5UzExOXlzVGlGUVRTbzkyNWFaamsrK3c9PTsyMDIyLTA4LTA1VDIwOjI1OjAzLjM1NzI5NjVaO1lmS0tzeE4yRUE0NWZNSnJOOGJzNVE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI4ZTgzMzY2MC00MmEzLTQ5MzAtYjk1Zi1hNjk0YjAyY2ZlMmUifQ&amp;p=B2C_1_tdpsynspring"
                   >regístrate aquí</a
                 > -->
-                <a id="forgotPassword" href="../registro/registro.html"
-                  >regístrate aquí</a
-                >
-              </p>
-            </div>
-          </form>
-        </div>
+              <a id="forgotPassword" href="../registro/registro.html"
+                >regístrate aquí</a
+              >
+            </p>
+          </div>
+        </form>
       </div>
     </div>
     <script

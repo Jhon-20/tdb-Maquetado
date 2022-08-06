@@ -41,9 +41,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 100% !important;
-  .container-forms {
+  min-height: 100vh;
+  .container-forms,
+  .container-forms-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,15 +101,20 @@ body {
 }
 @media (min-width: 768px) {
   .container-card {
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px !important;
-    .container-forms {
-      width: 490px;
-
+    .container-forms,
+    .container-forms-login {
       border-radius: 10px;
       box-shadow: 0 2px 15px -3px rgb(0 0 0 / 7%),
         0 10px 20px -2px rgb(0 0 0 / 4%);
+      form {
+        width: 95%;
+      }
+    }
+    .container-forms {
+      width: 700px;
+    }
+    .container-forms-login {
+      width: 500px;
     }
   }
 }

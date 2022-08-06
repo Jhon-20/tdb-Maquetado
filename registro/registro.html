@@ -25,107 +25,107 @@
   <body>
     <div class="container-card">
       <div class="container-forms">
-        <!-- <div class="logo mar-bot">
+        <div class="logo mar-bot">
           <img src="../img/logo.png" alt="" />
-        </div> -->
-        <h3 class="mar-bot blue">Regístrate</h3>
-        <div>
-          <form
-            id=""
-            action="JavaScript:void(0);"
-            class="localAccount"
-            aria-label="Iniciar sesión con su nombre de usuario"
-          >
-            <div
-              class="error pageLevel"
-              aria-hidden="false"
-              role="alert"
-              style="display: none"
-            >
-              <p>Parece que no podemos encontrar su cuenta.</p>
-            </div>
-            <div class="row">
-              <div class="entry-item form-floating col-12 col-md-6 mar-bot">
-                <select
-                  class="form-select"
-                  id="type_document"
-                  style="padding-top: 18px; padding-bottom: 18px"
-                >
-                  <option selected="" disabled="" value="">
-                    Tipo de documento
-                  </option>
-                  <option value="dni_">DNI</option>
-                  <option value="ext_">Carnet de Extranjeria</option>
-                </select>
-              </div>
-              <div class="col-12 col-md-6 mar-bot">
-                <div>
-                  <div class="entry-item form-floating">
-                    <input
-                      type="text"
-                      id="tdp_input_nrodocumento"
-                      class="form-control nro_document"
-                      placeholder="Nro. de documento"
-                    />
-                    <label class="form-label" for="tdp_input_nrodocumento"
-                      >Nro. de documento</label
-                    >
-                  </div>
-                  <div
-                    class="error itemLevel"
-                    aria-hidden="true"
-                    role="alert"
-                    style="display: none"
-                  >
-                    <p></p>
-                  </div>
-                  <input
-                    style="display: none"
-                    type="text"
-                    id="UserId"
-                    name="Nombre de usuario"
-                    title="Escriba un valor de Nombre de usuario válido."
-                    pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$"
-                    autofocus=""
-                    placeholder="Nombre de usuario"
-                    aria-label="Nombre de usuario"
-                  />
-                </div>
-              </div>
-            </div>
+        </div>
+        <!-- <h3 class="mar-bot blue">Regístrate</h3> -->
 
-            <div class="d-flex justify-content-center row mar-bot">
-              <div class="col-12">
-                <div class="form-floating md-form p-0">
+        <form
+          id=""
+          action="JavaScript:void(0);"
+          class="localAccount"
+          aria-label="Iniciar sesión con su nombre de usuario"
+        >
+          <div
+            class="error pageLevel"
+            aria-hidden="false"
+            role="alert"
+            style="display: none"
+          >
+            <p>Parece que no podemos encontrar su cuenta.</p>
+          </div>
+          <div class="row">
+            <div class="entry-item form-floating col-12 col-md-6 mar-bot">
+              <select
+                class="form-select"
+                id="type_document"
+                style="padding-top: 18px; padding-bottom: 18px"
+              >
+                <option selected="" disabled="" value="">
+                  Tipo de documento
+                </option>
+                <option value="dni_">DNI</option>
+                <option value="ext_">Carnet de Extranjeria</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6 mar-bot">
+              <div>
+                <div class="entry-item form-floating">
                   <input
                     type="text"
-                    id="password"
-                    class="form-control tdp_input_password"
-                    name="Contraseña"
-                    placeholder="Contraseña"
-                    aria-label="Contraseña"
-                    autocomplete="current-password"
-                    aria-required="true"
+                    id="tdp_input_nrodocumento"
+                    class="form-control nro_document"
+                    placeholder="Nro. de documento"
                   />
-                  <label class="form-label" for="password">Contraseña</label>
-                  <span class="icon-see" id="icon_see_passsword">
-                    <i
-                      class="far fa-lg fa-eye-slash"
-                      id="togglePassword"
-                      style="cursor: pointer"
-                    ></i>
-                  </span>
+                  <label class="form-label" for="tdp_input_nrodocumento"
+                    >Nro. de documento</label
+                  >
                 </div>
                 <div
                   class="error itemLevel"
                   aria-hidden="true"
+                  role="alert"
                   style="display: none"
                 >
-                  <p role="alert"></p>
+                  <p></p>
                 </div>
+                <input
+                  style="display: none"
+                  type="text"
+                  id="UserId"
+                  name="Nombre de usuario"
+                  title="Escriba un valor de Nombre de usuario válido."
+                  pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$"
+                  autofocus=""
+                  placeholder="Nombre de usuario"
+                  aria-label="Nombre de usuario"
+                />
               </div>
             </div>
-            <div class="col-12 mar-bot">
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6 mar-bot">
+              <div class="form-floating md-form p-0">
+                <input
+                  type="text"
+                  id="password"
+                  class="form-control tdp_input_password"
+                  name="Contraseña"
+                  placeholder="Contraseña"
+                  aria-label="Contraseña"
+                  autocomplete="current-password"
+                  aria-required="true"
+                />
+                <label class="form-label" for="password">Contraseña</label>
+                <span class="icon-see" id="icon_see_passsword">
+                  <i
+                    class="far fa-lg fa-eye-slash"
+                    id="togglePassword"
+                    style="cursor: pointer"
+                  ></i>
+                </span>
+              </div>
+              <div
+                class="error itemLevel"
+                aria-hidden="true"
+                style="display: none"
+              >
+                <p role="alert"></p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 mar-bot">
               <div>
                 <div class="entry-item form-floating">
                   <input
@@ -159,7 +159,9 @@
                 />
               </div>
             </div>
-            <div class="col-12 mar-bot">
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 mar-bot">
               <div>
                 <div class="entry-item form-floating">
                   <input
@@ -193,88 +195,8 @@
                 />
               </div>
             </div>
-            <div
-              class="row d-flex justify-content-center mar-bot cont-numerico-contraseña no-display"
-            >
-              <div class="col-12 col-md-6">
-                <table class="table">
-                  <tbody class="">
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          7
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          8
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          9
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          4
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          5
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          6
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          1
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          2
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          3
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn pl-0 pr-0 btn-block">
-                          <i class="fas fa-backspace"></i>
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-block form-control"
-                        >
-                          0
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-block">
-                          <i class="fas fa-broom"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="col-12 mar-bot">
+
+            <div class="col-12 col-md-6 mar-bot">
               <div class="entry-item form-floating">
                 <input
                   type="text"
@@ -306,119 +228,195 @@
                 aria-label="Nombre de usuario"
               />
             </div>
-            <div
-              class="row d-flex justify-content-center mar-bot cont-numerico-repeat no-display"
+          </div>
+          <div
+            class="row d-flex justify-content-center mar-bot cont-numerico-contraseña no-display"
+          >
+            <div class="col-12 col-md-6">
+              <table class="table">
+                <tbody class="">
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        7
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        8
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        9
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        4
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        5
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        6
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        1
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        2
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        3
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn pl-0 pr-0 btn-block">
+                        <i class="fas fa-backspace"></i>
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-block form-control">
+                        0
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-block">
+                        <i class="fas fa-broom"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div
+            class="row d-flex justify-content-center mar-bot cont-numerico-repeat no-display"
+          >
+            <div class="col-12 col-md-6">
+              <table class="table">
+                <tbody class="">
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        7
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        8
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        9
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        4
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        5
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        6
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        1
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        2
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-sm form-control">
+                        3
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-0">
+                      <button type="button" class="btn pl-0 pr-0 btn-block">
+                        <i class="fas fa-backspace"></i>
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-block form-control">
+                        0
+                      </button>
+                    </td>
+                    <td class="p-0">
+                      <button type="button" class="btn btn-block">
+                        <i class="fas fa-broom"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="working" style="display: none"></div>
+
+          <div class="buttons row d-flex justify-content-center mar-bot">
+            <button
+              type="button"
+              id="next"
+              class="btn btn-rounded col-md-6 col-11 tdp_sign bg-blue btn-inicia-session"
+              form="localAccountForm"
             >
-              <div class="col-12 col-md-6">
-                <table class="table">
-                  <tbody class="">
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          7
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          8
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          9
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          4
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          5
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          6
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          1
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          2
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-sm form-control">
-                          3
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button type="button" class="btn pl-0 pr-0 btn-block">
-                          <i class="fas fa-backspace"></i>
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-block form-control"
-                        >
-                          0
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-block">
-                          <i class="fas fa-broom"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="working" style="display: none"></div>
+              Registrarse
+            </button>
+          </div>
 
-            <div class="buttons row d-flex justify-content-center mar-bot">
-              <button
-                type="button"
-                id="next"
-                class="btn btn-rounded col-md-6 col-11 tdp_sign bg-blue btn-inicia-session"
-                form="localAccountForm"
+          <p class="registrate volver-atras">
+            <span style="margin-top: -1px"
+              ><svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Registrarse
-              </button>
-            </div>
-
-            <p class="registrate volver-atras">
-              <span style="margin-top: -1px"
-                ><svg
-                  width="8"
-                  height="12"
-                  viewBox="0 0 8 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.5 1.32104L1.5 6.32105L7.5 11.321"
-                    stroke="#019DF4"
-                  />
-                </svg>
-              </span>
-              <a id="forgotPassword" href="../login/login.html">Regresar</a>
-            </p>
-          </form>
-        </div>
+                <path
+                  d="M7.5 1.32104L1.5 6.32105L7.5 11.321"
+                  stroke="#019DF4"
+                />
+              </svg>
+            </span>
+            <a id="forgotPassword" href="../login/login.html">Regresar</a>
+          </p>
+        </form>
       </div>
     </div>
     <script

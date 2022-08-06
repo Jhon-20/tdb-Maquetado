@@ -49,9 +49,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100% !important;
+  min-height: 100vh;
 }
-.container-card .container-forms {
+.container-card .container-forms,
+.container-card .container-forms-login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,15 +62,18 @@ body {
   margin: auto;
   padding: 40px 24px;
 }
-.container-card .container-forms .logo {
+.container-card .container-forms .logo,
+.container-card .container-forms-login .logo {
   width: 80px;
   height: 68px;
 }
-.container-card .container-forms .logo img {
+.container-card .container-forms .logo img,
+.container-card .container-forms-login .logo img {
   width: 100%;
   height: 100%;
 }
-.container-card .container-forms form .icon-see {
+.container-card .container-forms form .icon-see,
+.container-card .container-forms-login form .icon-see {
   float: right;
   margin-top: -35px;
   margin-right: 15px;
@@ -77,23 +81,29 @@ body {
   z-index: 1;
   cursor: pointer;
 }
-.container-card .container-forms .table {
+.container-card .container-forms .table,
+.container-card .container-forms-login .table {
   margin-bottom: 0 !important;
 }
-.container-card .container-forms .olvido_contraseña {
+.container-card .container-forms .olvido_contraseña,
+.container-card .container-forms-login .olvido_contraseña {
   margin-bottom: 0;
 }
-.container-card .container-forms .olvido_contraseña a {
+.container-card .container-forms .olvido_contraseña a,
+.container-card .container-forms-login .olvido_contraseña a {
   color: var(--bg-principal) !important;
   border-bottom: 1px solid var(--bg-principal);
 }
-.container-card .container-forms .registrate {
+.container-card .container-forms .registrate,
+.container-card .container-forms-login .registrate {
   margin-bottom: 0;
 }
-.container-card .container-forms .registrate a {
+.container-card .container-forms .registrate a,
+.container-card .container-forms-login .registrate a {
   color: var(--bg-principal) !important;
 }
-.container-card .container-forms .btn-inicia-session {
+.container-card .container-forms .btn-inicia-session,
+.container-card .container-forms-login .btn-inicia-session {
   color: var(--bg-white);
   font-size: 16px;
   text-transform: none;
@@ -106,15 +116,20 @@ body {
 }
 
 @media (min-width: 768px) {
-  .container-card {
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px !important;
-  }
-  .container-card .container-forms {
-    width: 490px;
+  .container-card .container-forms,
+.container-card .container-forms-login {
     border-radius: 10px;
     box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  }
+  .container-card .container-forms form,
+.container-card .container-forms-login form {
+    width: 95%;
+  }
+  .container-card .container-forms {
+    width: 700px;
+  }
+  .container-card .container-forms-login {
+    width: 500px;
   }
 }
 
