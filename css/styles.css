@@ -1,136 +1,234 @@
-@charset "UTF-8";
+@import url("../css/telefonica.css");
 @font-face {
   font-family: Telefonica;
   src: url("font/Telefonica-Regular.otf") format("truetype");
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: Icomoon;
+  src: url("../font/icomoon.ttf") format("truetype");
 }
-
-/*--------------Variables--------------*/
-:root {
-  /*Colores*/
-  --bg-principal: #019df4;
-  --bg-secundario: #5cb615;
-  --bg-white: #ffffff;
-  --bg-gray-200: #f5f5f5;
-  --radius: 200px;
-}
-
 body {
-  height: 100vh !important;
-  font-family: Telefonica !important;
-  background-color: var(--bg-gray-200);
+  width: 100% !important;
+  overflow: auto !important;
+  margin-bottom: 92px !important;
+  background-color: #f5f5f5 !important;
 }
 
-.bg-blue {
-  background: var(--bg-principal) !important;
+.reg-header-logo {
+  background-color: var(--white);
 }
 
-.blue {
-  color: var(--bg-principal) !important;
-}
-
-.bg-green {
-  background: var(--bg-secundario) !important;
-}
-
-.mar-bot {
-  margin-bottom: 20px;
-}
-
-.no-display {
-  display: none !important;
-}
-
-.container-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.container-card .container-forms,
-.container-card .container-forms-login {
+#navigateTabTwo {
+  width: 460px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--bg-white);
-  width: 100%;
   margin: auto;
-  padding: 40px 24px;
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  padding: 20px 40px;
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
 }
-.container-card .container-forms .logo,
-.container-card .container-forms-login .logo {
-  width: 80px;
-  height: 68px;
+
+.shown {
+  display: block !important;
 }
-.container-card .container-forms .logo img,
-.container-card .container-forms-login .logo img {
-  width: 100%;
-  height: 100%;
+
+.hidden {
+  display: none !important;
 }
-.container-card .container-forms form .icon-see,
-.container-card .container-forms-login form .icon-see {
-  float: right;
-  margin-top: -35px;
-  margin-right: 15px;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
+
+.margin-bottom-120 {
+  margin-bottom: 120px;
 }
-.container-card .container-forms .table,
-.container-card .container-forms-login .table {
-  margin-bottom: 0 !important;
+
+#navBar {
+  display: none;
 }
-.container-card .container-forms .olvido_contraseña,
-.container-card .container-forms-login .olvido_contraseña {
-  margin-bottom: 0;
+
+#navigateTabOne {
+  display: none;
 }
-.container-card .container-forms .olvido_contraseña a,
-.container-card .container-forms-login .olvido_contraseña a {
-  color: var(--bg-principal) !important;
-  border-bottom: 1px solid var(--bg-principal);
-}
-.container-card .container-forms .registrate,
-.container-card .container-forms-login .registrate {
-  margin-bottom: 0;
-}
-.container-card .container-forms .registrate a,
-.container-card .container-forms-login .registrate a {
-  color: var(--bg-principal) !important;
-}
-.container-card .container-forms .btn-inicia-session,
-.container-card .container-forms-login .btn-inicia-session {
-  color: var(--bg-white);
-  font-size: 16px;
-  text-transform: none;
-}
-.container-card .volver-atras {
+
+.table {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  display: flex;
+  flex: none;
+}
+.table td {
+  width: 50px;
+  border-top: none !important;
 }
 
-@media (min-width: 768px) {
-  .container-card .container-forms,
-.container-card .container-forms-login {
-    border-radius: 10px;
-    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+@media (max-width: 425px) {
+  #navigateTabTwo {
+    display: block !important;
+    width: 100%;
   }
-  .container-card .container-forms form,
-.container-card .container-forms-login form {
-    width: 95%;
+
+  .align-right {
+    margin-left: 35% !important;
   }
-  .container-card .container-forms {
-    width: 700px;
+
+  .content-sign-in {
+    width: 90% !important;
   }
-  .container-card .container-forms-login {
-    width: 500px;
+}
+.container-sign-in {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-sign-in {
+  width: 100%;
+}
+
+.eyeContainer {
+  position: absolute;
+  right: 15px;
+  bottom: 21px;
+}
+
+.align-right {
+  margin-top: 0px !important;
+  margin-bottom: 15px !important;
+  margin-left: 42%;
+  text-decoration: underline;
+}
+
+.container-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-button p {
+  margin-top: 30px;
+  color: #3f3f3db3;
+}
+
+.container-button p a {
+  text-decoration: underline;
+}
+
+.container-button p a:link {
+  color: #00a9e0;
+  text-decoration: none;
+}
+
+.reg-footer-div {
+  position: relative;
+  margin-top: 20px;
+  bottom: 0;
+}
+
+.error-general-div1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px !important;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-captcha {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.container-catpcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legend-captcha {
+  margin: 0 0 5px -182px;
+  font-family: "Telefonica Light";
+  font-size: 13px;
+  color: #424b54;
+}
+
+.container-result-captcha {
+  height: 55px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-right: 20px;
+  background-color: #efefef;
+}
+
+.container-input-captcha {
+  height: 55px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px !important;
+  border: none !important;
+  border-radius: 6px;
+  background-color: #efefef;
+  font-family: "Telefonica Light";
+  font-style: italic;
+  color: #424b54;
+}
+
+.container-input-captcha:focus {
+  border: none !important;
+  background-color: #efefef;
+}
+
+.container-cambiar-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 0 -220px;
+}
+
+.container-cambiar-imagen span {
+  font-family: "Telefonica Light";
+  font-size: 14px;
+  color: #424b54;
+  margin-left: 5px;
+}
+
+@media (max-width: 360px) {
+  .container-result-captcha {
+    width: 130px;
   }
+
+  .container-input-captcha {
+    width: 130px;
+  }
+
+  .legend-captcha {
+    margin: 0 0 5px -123px;
+  }
+
+  .container-cambiar-imagen {
+    margin: 5px 0 0 -161px;
+  }
+}
+.form {
+  margin: 0 !important;
+}
+
+.captchaRegistryDate {
+  margin-top: 0 !important;
+}
+
+.errorPlace--inp {
+  margin-bottom: 15px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

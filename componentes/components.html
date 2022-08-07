@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/fonts-icomoon.css" />
+    <link rel="stylesheet" href="../css/telefonica.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <title>Components</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputs mt-4" style="width: 40%">
+        <h5>Select</h5>
+        <div class="reg-input-group">
+          <select
+            class="select reg-input reg-select"
+            name="selectDocumento"
+            aria-invalid="false"
+            id="selectDocumento"
+            value="1"
+          >
+            <!-- <option  hidden selected value >&nbsp;</option> -->
+            <option value="1" selected="">DNI</option>
+            <option value="2">CE</option>
+          </select>
+          <label
+            for=""
+            class="reg-floating-label label-select floating-label-active"
+            >Tipo de documento</label
+          >
+          <i class="reg-icon icon-caret-down right"></i>
+        </div>
+        <h5>Input</h5>
+
+        <div class="reg-input-group" id="__box-dni">
+          <input
+            class="inputText input reg-input"
+            name="docInputDni"
+            inputmode="numeric"
+            autocomplete="false | random-string"
+            required=""
+            id="inputDocument"
+          />
+          <label for="" class="reg-floating-label">Número de documento</label>
+          <i class="reg-icon icon-user left"></i>
+
+          <div id="inputDocument-error"></div>
+          <div id="inputDocumentError" class="errorPlace--inp"></div>
+        </div>
+      </div>
+      <div class="input_error mt-4" style="width: 40%">
+        <h3>Input errores</h3>
+        <div class="reg-message-box reg-error-box" id="box-main-error">
+          <span class="reg-box-icon">
+            <i class="reg-icon icon-cancel"></i>
+          </span>
+          <div>
+            <span id="inputDocumentError">
+              Tu documento y/o contraseña no son correctos.
+            </span>
+          </div>
+        </div>
+        <div
+          id="div-error-general"
+          class="reg-message-box reg-error-box error-general-div1"
+        >
+          <span style="flex: 1" class="reg-box-icon">
+            <i class="reg-icon icon-cancel"></i>
+          </span>
+          <div style="flex: 10">
+            <span> Error </span>
+            <br />
+            <span> Tu documento y/o contraseña no son correctos. </span>
+          </div>
+        </div>
+        <div id="inputPasswordError" class="errorPlace--inp">
+          Solo debe aceptar 6 numero
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
