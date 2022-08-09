@@ -1,7 +1,7 @@
 @import url("../css/telefonica.css");
 @font-face {
   font-family: Telefonica;
-  src: url("font/Telefonica-Regular.otf") format("truetype");
+  src: url("../font/Telefonica-Regular.otf") format("truetype");
 }
 @font-face {
   font-family: Icomoon;
@@ -9,13 +9,70 @@
 }
 body {
   width: 100% !important;
-  overflow: auto !important;
-  margin-bottom: 92px !important;
   background-color: #f5f5f5 !important;
 }
 
-.reg-header-logo {
+.app-tdp-page {
+  min-height: 100vh;
+}
+.app-tdp-page .page-principal {
+  width: 100%;
+  min-height: calc(100vh - 180px);
+}
+.app-tdp-page .app-footer {
+  position: absolute;
+  margin-top: 20px;
+  width: 100%;
+}
+.app-tdp-page .app-footer .logo-footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--white) !important;
+  border-top: 1px solid #e9eae8;
+  opacity: 1;
+  color: var(--secundary);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.vh-100 {
+  min-height: 100vh !important;
+}
+
+.bg-white {
   background-color: var(--white);
+}
+
+.bg-blue {
+  background-color: var(--blue) !important;
+}
+
+.bg-green {
+  background: var(--green) !important;
+}
+
+.blue {
+  color: var(--blue) !important;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.bord-top {
+  border-top: 1px solid #dfdfdf;
+}
+
+.bord-bot {
+  border-bottom: 1px solid #dfdfdf !important;
 }
 
 #navigateTabTwo {
@@ -29,6 +86,28 @@ body {
   border-radius: 0.25rem;
   padding: 20px 40px;
   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+}
+
+.container-buttons-header {
+  display: flex;
+  gap: 40px;
+}
+
+.cont-btn-salir {
+  display: flex;
+  flex-direction: row !important;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 8px 24px !important;
+  cursor: pointer;
+}
+.cont-btn-salir .btn-salir {
+  min-width: auto !important;
+  padding: 0 !important;
+}
+
+.title {
+  padding: 10px 24px;
 }
 
 .shown {
@@ -51,18 +130,81 @@ body {
   display: none;
 }
 
-.table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex: none;
+.container_table {
+  padding: 0 24px;
 }
-.table td {
-  width: 50px;
-  border-top: none !important;
+.container_table .content_table {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 340px !important;
+}
+.container_table .content_table table {
+  width: 100%;
+}
+.container_table .content_table table thead {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #fafafa;
+  z-index: 40;
+  border-bottom: 1px solid #dfdfdf !important;
+}
+.container_table .content_table table thead tr {
+  width: 100%;
+}
+.container_table .content_table table thead tr th {
+  padding: 8px 5px;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf !important;
+}
+.container_table .content_table table thead tr th.th-header-start {
+  border-top-left-radius: 8px !important;
+}
+.container_table .content_table table thead tr th.th-header-end {
+  border-top-right-radius: 8px !important;
+}
+.container_table .content_table table .tdp-tbody {
+  position: relative;
+}
+.container_table .content_table table .tdp-tbody .tdp-table-row {
+  margin: auto;
+  padding: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+.container_table .content_table table .tdp-tbody .tdp-table-row td {
+  padding: 8px 5px;
+  text-align: center;
+  min-width: 150px;
+}
+.container_table .content_table table .tdp-tbody .tdp-table-row td .container-btn-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto !important;
+  gap: 10px !important;
+}
+.container_table .content_table table .tdp-tbody .tdp-table-row td #icons {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #797979;
+}
+.container_table .content_table table .tdp-tbody .tdp-table-row:hover {
+  background-color: #f5f5f5;
 }
 
+@media (min-width: 768px) {
+  .container-buttons-header {
+    display: flex !important;
+  }
+}
 @media (max-width: 425px) {
   #navigateTabTwo {
     display: block !important;

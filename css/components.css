@@ -177,9 +177,9 @@ body {
 
 /*** Button ***/
 .reg-btn {
-  color: #fff !important;
-  background: #019df4 !important;
-  padding: 12px 30px 12px 30px !important;
+  color: #fff;
+  background: #019df4;
+  padding: 12px 30px 12px 30px;
   font-size: 1em !important;
   font-family: "Telefonica Light" !important;
   border-radius: 200px !important;
@@ -188,10 +188,23 @@ body {
   text-align: center !important;
   letter-spacing: 0.0125em !important;
   cursor: pointer !important;
-  min-width: 220px !important;
+  min-width: 220px;
   text-transform: none !important;
 }
-
+.reg-btn2 {
+  background: transparent !important;
+  padding: 8px 24px !important;
+  font-size: 1em !important;
+  font-family: "Telefonica Light" !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  border: 1px solid var(--white) !important;
+  text-align: center !important;
+  letter-spacing: 0.0125em !important;
+  cursor: pointer !important;
+  min-width: auto !important;
+  text-transform: none !important;
+}
 /*** Button toggle ***/
 .reg-btn-toggle {
   position: absolute;
@@ -413,7 +426,11 @@ body {
 .reg-btn-close .reg-icon {
   font-size: 13px;
 }
-
+.btn-short {
+  padding: 4px 24px !important;
+  border-radius: 20px;
+  font-size: 15px;
+}
 /* types text */
 .reg-center-wrap {
   text-align: center;
@@ -469,6 +486,11 @@ body {
   font-size: 17px;
   margin-bottom: 0px;
 }
+.header-transaccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .reg-input-main-selector {
   width: 100%;
   border: 1px solid rgb(221, 221, 221);
@@ -503,8 +525,6 @@ body {
 
 .reg-logo {
   width: 60px;
-  margin-bottom: 15px;
-  margin-top: 15px;
 }
 
 .main-body {
@@ -567,6 +587,7 @@ body {
 }
 
 .reg-header-logo {
+  padding: 15px 48px;
   width: 100%;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
