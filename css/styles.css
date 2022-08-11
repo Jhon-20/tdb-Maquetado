@@ -17,15 +17,18 @@ body {
 .app-tdp-page {
   min-height: 100vh;
 }
+
 .app-tdp-page .page-principal {
   width: 100%;
   min-height: calc(100vh - 180px);
 }
+
 .app-tdp-page .app-footer {
   position: absolute;
   margin-top: 20px;
   width: 100%;
 }
+
 .app-tdp-page .app-footer .logo-footer {
   left: 0;
   bottom: 0;
@@ -56,9 +59,11 @@ body {
 .bg-green {
   background: var(--green) !important;
 }
+
 .bg-gray {
   background: var(--secondary) !important;
 }
+
 .blue {
   color: var(--blue) !important;
 }
@@ -78,11 +83,25 @@ body {
 .bord-bot {
   border-bottom: 1px solid #dfdfdf !important;
 }
+
 .mar-bot {
   margin-bottom: 15px;
 }
+
 .text-center {
   text-align: center !important;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-15 {
+  font-size: 15px;
+}
+
+.font-16 {
+  font-size: 16px;
 }
 
 .title {
@@ -285,6 +304,7 @@ body {
   padding: 15px 40px;
   cursor: pointer;
 }
+
 @media (min-width: 992px) {
   .akuTab__header {
     border-bottom: none;
@@ -299,6 +319,7 @@ body {
   font-weight: bold;
   color: #515151;
 }
+
 @media (max-width: 991px) {
   .akuTab__header.akuTab__header--is-active .akuTab__icon {
     -webkit-transform: rotate(180deg);
@@ -314,10 +335,10 @@ body {
     border-bottom: 2px solid #515151;
   }
 }
-
 .akuTab__nav .akuTab__header {
   display: none;
 }
+
 @media (min-width: 992px) {
   .akuTab__nav .akuTab__header {
     display: inline-block;
@@ -341,6 +362,7 @@ body {
   transform-origin: 50% 50%;
   width: 18px;
 }
+
 .akuTab__icon:before {
   position: absolute;
   top: 50%;
@@ -354,6 +376,7 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+
 @media (min-width: 992px) {
   .akuTab__icon:before {
     font-family: Arial;
@@ -367,7 +390,6 @@ body {
     right: 0;
   }
 }
-
 .akuTab__content {
   display: none;
   overflow-x: auto;
