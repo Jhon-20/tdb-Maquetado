@@ -85,15 +85,15 @@ body {
 
 .reg-input {
   font-size: 16px;
-  font-family: "Telefonica Light";
-  color: #555;
+  font-family: "Telefonica Regular";
+  color: #86888c;
   outline: none;
-  border: 1px solid #bbb;
-  padding: 10px 20px 10px 40px !important;
+  border: 1px solid #b6b7b7;
+  padding: 12px 20px 12px 16px;
   box-sizing: border-box !important;
-  border-radius: 4px 4px !important;
+  border-radius: 8px !important;
   /* position:relative; */
-  height: 100%;
+  height: 48px;
   width: 100%;
 }
 
@@ -115,12 +115,13 @@ body {
 }
 
 .reg-input:focus {
-  border-color: #00a9e0 !important;
-  border-width: 2px !important;
+  border-color: var(--blue) !important;
+  border-width: 1px !important;
 }
 
 .reg-input:hover {
-  border-color: #00a9e0;
+  border-color: #50535a;
+  color: #50535a;
 }
 
 .reg-input:focus ~ .reg-icon {
@@ -128,13 +129,14 @@ body {
 }
 
 .reg-floating-label {
-  font-family: "Telefonica Light";
-  color: rgba(0, 0, 0, 0.87);
+  font-family: "Telefonica Regular";
+  color: #86888c;
   font-size: 16px;
   position: absolute;
   z-index: 2;
-  left: 40px;
-  top: 19px;
+  left: 16px;
+  top: 12px;
+  line-height: 24px;
   padding: 0 4px;
   pointer-events: none;
   background: white;
@@ -151,7 +153,34 @@ body {
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
     color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
-
+.reg-floating-label-icon {
+  font-family: "Telefonica Regular";
+  color: #86888c;
+  font-size: 16px;
+  position: absolute;
+  z-index: 2;
+  left: 48px;
+  top: 12px;
+  line-height: 24px;
+  padding: 0 4px;
+  pointer-events: none;
+  background: white;
+  transition: all 100ms ease;
+  transform: translateY(0px);
+  box-sizing: border-box;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+  overflow: hidden;
+  will-change: transform;
+  transform-origin: left top;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.reg-input:hover + .reg-floating-label {
+  color: #50535a;
+}
 .reg-floating-label.label-select {
   left: 15px;
 }
@@ -162,7 +191,12 @@ body {
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
     color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
-
+.reg-input:focus + .reg-floating-label-icon {
+  color: #00a9e0;
+  transform: translateY(-30px) translateX(-20px) scale(0.85);
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
 .reg-input:focus + .reg-floating-label.label-select {
   transform: translateY(-30px) translateX(5px) scale(0.85);
 }
@@ -170,12 +204,22 @@ body {
 .floating-label-active {
   color: rgba(0, 0, 0, 0.87);
   transform: translateY(-30px) translateX(-20px) scale(0.85);
+  font-size: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  top: 20px;
+  font-weight: 400;
+  left: 35px;
 }
 .floating-label-active.label-select {
   color: rgba(0, 0, 0, 0.87);
   transform: translateY(-30px) translateX(5px) scale(0.85);
 }
-
+.reg-description-error {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
 /*** Button ***/
 .reg-btn {
   color: #fff;
@@ -273,7 +317,15 @@ body {
   font-size: 14px;
   font-family: "Telefonica Light";
 }
-
+.reg-input-error {
+  border-color: #e63780;
+}
+.reg-floating-label-error {
+  color: #e63780 !important;
+}
+.reg-input-error:hover {
+  border-color: #e63780;
+}
 /* Message box*/
 .reg-message-box {
   display: flex;
@@ -724,4 +776,20 @@ body {
   color: #3f3f3db3;
   text-align: center;
   margin: 0 0 10px 0;
+}
+.icon-view-password {
+  background: url(../img/view_on_regular_24.svg) !important;
+  width: 24px;
+  height: 24px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer !important;
+}
+.icon-noview-password {
+  background: url(../img/view_off_regular_24.svg);
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }

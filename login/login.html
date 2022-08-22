@@ -1,262 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../font/fonts-icomoon.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../login/login.css" />
-    <link rel="stylesheet" href="../css/telefonica.css" />
-    <link rel="stylesheet" href="../css/components.css" />
 
-    <title>Login</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet"
+    data-preload="true" />
 
-  <body>
-    <div class="reg-header-logo reg-header-logo-two bg-white">
-      <img
-        class="reg-logo reg-logo-two"
-        src="data:image/png;base64,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"
-      />
+  <link rel="stylesheet" data-preload="true"
+    href="https://tdpaksstorage.blob.core.windows.net/root/font/fonts-icomoon.css" />
+  <link rel="stylesheet" data-preload="true" href="https://tdpaksstorage.blob.core.windows.net/root/style/styles.css" />
+
+  <!-- <link
+      rel="stylesheet"
+      data-preload="true"
+      href="https://tdpaksstorage.blob.core.windows.net/root/style/telefonica.css"
+    /> -->
+  <link rel="stylesheet" href="../css/telefonica.css" />
+  <!-- <link
+      rel="stylesheet"
+      data-preload="true"
+      href="https://tdpaksstorage.blob.core.windows.net/root/style/components.css"
+    /> -->
+  <link rel="stylesheet" href="../css/components.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"
+    data-preload="true" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"
+    data-preload="true" />
+  <title>Login</title>
+</head>
+
+<body>
+  <div id="api"></div>
+  <div class="app-login">
+    <div class="reg-header-logo reg-header-logo-two">
+      <img class="reg-logo reg-logo-two" data-preload="true"
+        src="data:image/png;base64,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" />
     </div>
+
     <div class="container-sign-in" style="padding: 2em">
       <!-- login por documento -->
-      <div id="navigateTabTwo">
+      <div id="api2" data-name="SelfAsserted" class="navigateTabTwo">
         <h5 class="reg-title">Bienvenido</h5>
 
-        <div
-          class="form"
-          method="POST"
-          novalidate="novalidate"
-          id="formGeneral"
-        >
-          <div class="content-sign-in">
-            <div class="reg-input-group">
-              <select
-                class="select reg-input reg-select"
-                name="selectDocumento"
-                aria-invalid="false"
-                id="selectDocumento"
-                value="1"
-              >
+        <form action="JavaScript:void(0);" class="form formGeneral" aria-label="Iniciar sesión con su nombre de usuario"
+          novalidate="novalidate" id="attributeVerification">
+          <div id="requiredFieldMissing" class="error pageLevel text-center text-danger mb-1" style="display: none"
+            aria-hidden="true">
+            Falta un campo obligatorio.
+          </div>
+          <div id="fieldIncorrect" class="error pageLevel text-center text-danger mb-1" style="display: none"
+            aria-hidden="true">
+            Campos inválidos o vacíos. Compruebe las entradas y vuelva a
+            intentarlo.
+          </div>
+          <div id="claimVerificationServerError" class="error pageLevel text-center text-danger mb-1"
+            style="display: none" aria-hidden="true"></div>
+
+          <div id="attributeList" class="attr content-sign-in">
+            <div class="reg-input-group attrEntry">
+              <select class="select reg-input reg-select selectDocumento" name="selectDocumento" aria-invalid="false"
+                id="docType" value="1">
+                <option style="display: none" disabled="disabled" value="">
+                  Tipo de documento
+                </option>
                 <!-- <option  hidden selected value >&nbsp;</option> -->
-                <option value="1" selected="">DNI</option>
-                <option value="2">CE</option>
+                <option value="DNI" selected="">DNI</option>
+                <option value="EXT">CE</option>
               </select>
-              <label
-                for=""
-                class="reg-floating-label label-select floating-label-active"
-                >Tipo de documento</label
-              >
+              <label for="" class="reg-floating-label label-select">Tipo de documento</label>
               <i class="reg-icon icon-caret-down right"></i>
             </div>
-            <!-- Error -->
-            <div id="inputPasswordError" class="errorPlace--inp">
-              Solo debe aceptar 6 numero
-            </div>
-            <!-- Error -->
-            <div class="reg-input-group" id="__box-dni">
-              <input
-                class="inputText input reg-input"
-                name="docInputDni"
-                inputmode="numeric"
-                autocomplete="false | random-string"
-                required=""
-                id="inputDocument"
-              />
-              <label for="" class="reg-floating-label"
-                >Número de documento</label
-              >
-              <i class="reg-icon icon-user left"></i>
-
-              <div id="inputDocument-error"></div>
-              <div id="inputDocumentError" class="errorPlace--inp"></div>
-            </div>
-            <!-- Error -->
-            <div id="inputPasswordError" class="errorPlace--inp">
-              Solo debe aceptar 6 numero
-            </div>
-            <!-- Error -->
-            <div class="reg-input-group">
-              <input
-                class="inputText input js-inputPassword password-text reg-input"
-                name="passInput"
-                spellcheck="false"
-                required=""
-                id="inputPassword"
-                type="text"
-              />
-
-              <label for="" class="reg-floating-label">Contraseña</label>
-              <i class="reg-icon icon-locked left"></i>
-
-              <div class="eyeContainer" style="width: 20px">
-                <img
-                  id="eyePassword1"
-                  onclick="showHideEye1('inputPassword', 'open', 'eyePassword1', 'eyePassword2')"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyMCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41MzQyIDYuNDYwMzhDMTguNjcxNSA2LjY3OTM0IDE4Ljc4MzYgNi44NzEzMyAxOC44NzA2IDcuMDI2NzRDMTguNzg0NiA3LjE4MDA2IDE4LjY3MzkgNy4zNjkwMiAxOC41Mzg1IDcuNTg0M0MxOC4xNTM0IDguMTk2NzkgMTcuNTc0NiA5LjAxMjIzIDE2LjgwMjIgOS44MjQ0NkMxNS4yNTEyIDExLjQ1NTQgMTIuOTk1NSAxMyAxMC4wMDA0IDEzQzYuNjM1NzIgMTMgNC4zODg0MSAxMS40MzA1IDIuOTU0NDEgOS44MzIyQzIuMjMzMyA5LjAyODQ1IDEuNzIzNjMgOC4yMjE3OSAxLjM5NTExIDcuNjE2NjVDMS4yNzUyNyA3LjM5NTkgMS4xODAzNSA3LjIwMzQ1IDEuMTA4NzEgNy4wNDk2OEMxLjIwMDggNi44ODgyNiAxLjMyMjkzIDYuNjgzMTQgMS40NzQ4NSA2LjQ0NjQ5QzEuODcwODEgNS44Mjk3MiAyLjQ2Mjc1IDUuMDA4ODQgMy4yNDQ4NyA0LjE5MTI3QzQuODE4NjIgMi41NDYxOSA3LjA3NTA4IDEgMTAuMDAwNCAxQzEyLjk3OSAxIDE1LjIzNDIgMi41NTQzOCAxNi43OTA1IDQuMjAwNTZDMTcuNTY1MSA1LjAxOTgxIDE4LjE0NjcgNS44NDIzOSAxOC41MzQyIDYuNDYwMzhaTTAuOTM4NDczIDYuNjU0NjRDMC45MzgyODIgNi42NTQxMyAwLjkzODI0NSA2LjY1NDAzIDAuOTM4MzYxIDYuNjU0MzRMMC45Mzg0NzMgNi42NTQ2NFoiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAuMDE1NCA0LjM3NUM4LjYzNTA4IDQuMzc3NjMgNy41MTc4MiA1LjU5Mzg4IDcuNTE3ODIgN0M3LjUxNzgyIDguNDA1MjUgOC42MzUwOCA5LjYyNSAxMC4wMTU0IDkuNjI1QzExLjM5NTggOS42MjUgMTIuNTEzIDguNDA0MzggMTIuNTEzIDdDMTIuNTEzIDUuNTkzIDExLjM5NTggNC4zNzIzOCAxMC4wMTU0IDQuMzc1VjQuMzc1WiIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+DQo="
-                  alt=""
-                  style="display: none"
-                />
-                <img
-                  id="eyePassword2"
-                  onclick="showHideEye1('inputPassword', 'close', 'eyePassword2', 'eyePassword1')"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyMiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuMDAwNCAwQzMuODQxOTIgMCAwLjE2NjYyNiA3IDAuMTY2NjI2IDdDMC4xNjY2MjYgNyAyLjk0MDAxIDE0IDExLjAwMDQgMTRDMTguMjk5NiAxNCAyMS44MzMzIDcuMDI3MTIgMjEuODMzMyA3LjAyNzEyQzIxLjgzMzMgNy4wMjcxMiAxOC4yNzE2IDAgMTEuMDAwNCAwWk0xMS4wMTY2IDExLjM3NUM4LjM5OTI5IDExLjM3NSA2LjUwNzA4IDkuNDYwNSA2LjUwNzA4IDdDNi41MDcwOCA0LjUzODYyIDguMzk5MjkgMi42MjUgMTEuMDE2NiAyLjYyNUMxMy42MzQgMi42MjUgMTUuNTI2MiA0LjUzODYyIDE1LjUyNjIgN0MxNS41MjYyIDkuNDYwNSAxMy42MzQgMTEuMzc1IDExLjAxNjYgMTEuMzc1Wk0xMS4wMTY2IDQuMzc1QzkuNTIxMjcgNC4zNzc2MiA4LjMxMDkgNS41OTM4NyA4LjMxMDkgN0M4LjMxMDkgOC40MDUyNSA5LjUyMTI3IDkuNjI1IDExLjAxNjYgOS42MjVDMTIuNTEyIDkuNjI1IDEzLjcyMjQgOC40MDQzOCAxMy43MjI0IDdDMTMuNzIyNCA1LjU5MyAxMi41MTIgNC4zNzIzOCAxMS4wMTY2IDQuMzc1WiIgZmlsbD0iIzc1NzU3NSIvPg0KPC9zdmc+DQo="
-                  alt=""
-                />
+            <div class="error itemLevel text-danger" role="alert"></div>
+            <div class="TextBox attrEntry" id="__box-dni" style="margin-bottom: 15px;">
+              <div class="reg-input-group" style="margin-bottom: 0">
+                <input class="inputText textInput input reg-input inputDocument nro_document" name="docInputDni"
+                  inputmode="numeric" autocomplete="false | random-string" aria-label="Nro Documento"
+                  pattern="^[0-9]{8,12}$" title="Nro. Documeto Inválido" id="docNumber" maxlength="8"
+                  onkeyup="contadorNumber(this);" />
+                <label id="docNumber_label" for="docNumber" class="reg-floating-label floating-label-active">
+                  Número de documento</label>
               </div>
-
-              <div id="inputPasswordError" class="errorPlace--inp"></div>
-            </div>
-            <div class="row d-flex justify-content-center mar-bot">
-              <div class="col-12 col-md-6">
-                <table class="table_numeric">
-                  <tbody class="">
-                    <tr>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          7
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          8
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          9
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          4
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          5
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          6
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          1
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          2
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-sm form-control btn-teclado"
-                        >
-                          3
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn pl-0 pr-0 btn-block btn-teclado"
-                        >
-                          <i class="fas fa-backspace"></i>
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button
-                          type="button"
-                          class="btn btn-block form-control btn-teclado"
-                        >
-                          0
-                        </button>
-                      </td>
-                      <td class="p-0">
-                        <button type="button" class="btn btn-block btn-teclado">
-                          <i class="fas fa-broom"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="reg-description-error" id="reg-description-error" style="display: none;">
+                <div id="inputDocumentError" class="errorPlace--inp"></div>
+                <div id="inputDocumentErrorCont" class="errorPlace--inp"><span id="contNumber">0</span>/8</div>
               </div>
             </div>
 
+            <div class="TextBox UserId_li" style="display: none">
+              <div class="attrEntry">
+                <label id="signInName_label" for="signInName">Sign in name</label>
+                <div class="error itemLevel" role="alert"></div>
+                <input id="signInName" class="textInput" type="text" aria-label="Sign in name"
+                  pattern="^[a-zA-Z0-9._-]{4,18}$" aria-required="true" autofocus="autofocus" />
+              </div>
+            </div>
+
+            <div class="TextBox extension_CaptchaUserResponseToken_li" style="display: none">
+              <div class="attrEntry">
+                <div class="error itemLevel" role="alert"></div>
+                <input id="extension_CaptchaUserResponseToken" class="textInput" type="text"
+                  placeholder="CaptchaUserResponseToken" aria-label="CaptchaUserResponseToken" aria-required="true" />
+              </div>
+            </div>
+
+            <div class="TextBox extension_docNumber_li" style="display: none">
+              <div class="attrEntry">
+                <div class="error itemLevel" role="alert"></div>
+                <input id="extension_docNumber" class="textInput" type="text" placeholder="CaptchaUserResponseToken"
+                  aria-label="CaptchaUserResponseToken" aria-required="true" />
+              </div>
+            </div>
+
+            <div class="TextBox extension_docType_li" style="display:none;">
+              <div class="attrEntry">
+                <div class="error itemLevel" role="alert"></div>
+                <input id="extension_docType" class="textInput" type="text" placeholder="CaptchaUserResponseToken"
+                  aria-label="CaptchaUserResponseToken" aria-required="true" />
+              </div>
+            </div>
+
+            <div class="Password attrEntry newPassword_li" style="margin-bottom: 15px;">
+              <div class="reg-input-group" style="margin-bottom: 0">
+
+                <input class="inputText textInput input js-inputPassword reg-input inputPassword" name="Contraseña"
+                  spellcheck="false" required="" id="password" type="password" aria-label="Contraseña"
+                  pattern="^[0-9]{6,6}$" title="Escriba la contraseña nueva" title="Contraseña Requerida"
+                  autocomplete="new-password" aria-required="true" readonly maxlength="6" style="padding-left: 48px;" />
+
+                <label id="password_label" for="password" class="reg-floating-label-icon">Contraseña</label>
+                <svg width="24" class="reg-icon left" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" style="top:42%;left: 20px;">
+                  <path fill-rule="evenodd" clip-rule="evenodd" class="pathPassword"
+                    d="M21.8662 12.6667C21.9516 12.7432 22 12.8497 22 12.9617C22 13.0738 21.9545 13.1831 21.8691 13.2623L19.897 15.0765C19.7291 15.2295 19.4673 15.2268 19.3051 15.0683L18.0359 13.8443L17.2931 14.9945C17.2191 15.1093 17.0939 15.1803 16.9545 15.1858C16.8008 15.2022 16.6813 15.1339 16.5987 15.0273L15.6824 13.8825L14.8685 15.0109C14.7888 15.1202 14.6608 15.1858 14.5213 15.1858H9.79738C9.77177 15.2404 9.749 15.2896 9.73478 15.3197C9.16278 16.418 7.92203 17 6.14627 17C3.47126 17 2 15.5792 2 13C2 10.4208 3.47126 9 6.14627 9C8.28344 9 9.29653 9.89891 9.77462 10.7459H19.5669C19.675 10.7459 19.7775 10.7842 19.8571 10.8552L21.8662 12.6667ZM5.63688 13.6858C5.12749 13.6858 4.92829 13.4945 4.92829 13.0027C4.92829 12.5109 5.12464 12.3197 5.63688 12.3197C6.14912 12.3197 6.34548 12.5109 6.34548 13.0027C6.34548 13.4945 6.14627 13.6858 5.63688 13.6858ZM5.63688 11.5027C4.66363 11.5027 4.08025 12.0656 4.08025 13.0027C4.08025 13.9426 4.66363 14.5027 5.63688 14.5027C6.61013 14.5027 7.19351 13.9426 7.19351 13.0027C7.19351 12.0628 6.61298 11.5027 5.63688 11.5027Z"
+                    fill="#86888C" />
+                </svg>
+
+                <div id="icon_see_passsword" class="eyeContainer" style="width: 20px">
+
+                  <svg id="togglePassword" class="icon-noview-password"></svg>
+
+                </div>
+              </div>
+              <!-- <div class="error itemLevel text-danger" role="alert"></div> -->
+              <div class="reg-description-error" id="reg-description-error" style="display: none;">
+                <div id="inputDocumentError" class="errorPlace--inp">
+
+                </div>
+                <div id="inputDocumentErrorCont" class="errorPlace--inp"><span id="contNumber">0</span>/8</div>
+              </div>
+            </div>
+            <div id="VirtualKey" style="display: none">
+              <div class="row d-flex justify-content-center mar-bot">
+                <div class="col-12 col-md-6">
+                  <table class="table">
+                    <tbody class="">
+                      <tr>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key1 btn-virtual-key">
+                            7
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key2 btn-virtual-key">
+                            8
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key3 btn-virtual-key">
+                            9
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key4 btn-virtual-key">
+                            4
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key5 btn-virtual-key">
+                            5
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key6 btn-virtual-key">
+                            6
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key7 btn-virtual-key">
+                            1
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key8 btn-virtual-key">
+                            2
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-sm form-control btn-teclado key9 btn-virtual-key">
+                            3
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="p-0">
+                          <button type="button" class="btn pl-0 pr-0 btn-block btn-teclado btn-virtual-key-aux del">
+                            <i class="fas fa-backspace"></i>
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-block form-control btn-teclado key0 btn-virtual-key">
+                            0
+                          </button>
+                        </td>
+                        <td class="p-0">
+                          <button type="button" class="btn btn-block btn-teclado btn-virtual-key-aux clean">
+                            <i class="fas fa-broom"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
             <div class="forgotContainer">
-              <a class="linkBlue align-right" href="#">
+              <a class="linkBlue align-right m-2"
+                href="https://tdpsynopsis.b2clogin.com/tdpsynopsis.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1A_RESETPASSWORD&client_id=8db14fbd-165d-4326-b8db-432653548fec&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fapp&scope=openid&response_type=id_token&prompt=login">
                 ¿Olvidaste tu contraseña?
               </a>
             </div>
           </div>
 
-          <div class="container-button">
+          <div class="container-button mt-3">
             <div class="container-button" id="LoginCTA">
-              <button
-                class="buttton reg-btn"
-                id="inputSubmit"
-                style="text-transform: uppercase"
-              >
-                Iniciar sessión
+              <button class="buttton reg-btn" id="continue" style="text-transform: uppercase; display: none"
+                form="localAccountForm">
+                Iniciar sesion
+              </button>
+              <button id="btn_prev_init_sesion" class="buttton reg-btn" style="text-transform: uppercase">
+                Iniciar Sesion
               </button>
               <p>
                 Si no tienes una cuenta, regístrate
-                <a href="../registro/registro.html" class="linkBlue">aquí</a>
+                <a href="https://tdpsynopsis.b2clogin.com/tdpsynopsis.onmicrosoft.com/B2C_1A_signup_signin/oauth2/v2.0/authorize?client_id=5a6a0d97-a7a5-4eff-b8e4-d1d7b45afa36&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost:4200%2Fapp&scope=openid&response_type=id_token&option=signup"
+                  class="linkBlue">aquí</a>
+                <!-- <a href="https://tdpsynopsis.b2clogin.com/tdpsynopsis.onmicrosoft.com/B2C_1A_signup_signin/oauth2/v2.0/authorize?client_id=5a6a0d97-a7a5-4eff-b8e4-d1d7b45afa36&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost:4200%2Fapp&scope=openid&response_type=id_token&option=signup" class="linkBlue">aquí</a> -->
               </p>
             </div>
           </div>
-        </div>
+          <div class="verifying-modal text-center mt-3">
+            <div id="verifying_blurb" style="color: #5cb615"></div>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"
-    ></script>
-    <script src="../js/sign-in.js"></script>
-  </body>
+  <script>
+
+    document.getElementById("api").remove();
+    document.getElementById("api2").setAttribute("id", "api");
+
+
+
+    //Validacion  de Inputs
+    let inputNroDoc = document.getElementById("docNumber")
+    let inputPassword = document.getElementById("password")
+    let regInput = document.querySelectorAll(".reg-input")
+    let regInputError = document.getElementById("reg-description-error")
+    let descriptionInput = document.querySelectorAll('.errorPlace--inp')
+    let inputError = document.getElementById("inputDocumentError");
+    let regFloatingLabel = document.querySelectorAll(".reg-floating-label")
+    let iconMuestraPass = document.getElementById("togglePassword")
+
+    inputNroDoc.addEventListener("click", (e) => {
+      regInputError.style.display = "flex"
+      inputError.innerHTML = "Ingrese su número de documento"
+      for (let descInput of descriptionInput) {
+        descInput.style.color = '#019df4';
+      }
+      for (let floatLabel of regFloatingLabel) {
+        floatLabel.classList.remove("reg-floating-label-error")
+      }
+    });
+    function contadorNumber(obj) {
+      contNum = document.getElementById("contNumber")
+      let maxlength = 8;
+      let strLength = obj.value.length;
+      if (strLength <= maxlength) {
+        contNum.innerHTML = strLength;
+      }
+
+    }
+    inputPassword.addEventListener("click", (event) => {
+      $(".pathPassword").css({
+        'fill': '#019DF4'
+      })
+    })
+    document.getElementById("docType").addEventListener("change", (event) => {
+      if (document.getElementById("docType").value == "DNI") {
+        document.getElementById("docNumber").setAttribute("maxlength", "8");
+      } else {
+        document.getElementById("docNumber").setAttribute("maxlength", "12");
+      }
+      document
+        .getElementById("extension_docType")
+        .setAttribute("value", document.getElementById("docType").value);
+
+      document
+        .getElementById("signInName")
+        .setAttribute(
+          "value",
+          document.getElementById("docType").value +
+          "_" +
+          document.getElementById("docNumber").value
+        );
+    });
+
+    document
+      .getElementById("docNumber")
+      .addEventListener("keyup", (event) => {
+        document.getElementById("extension_docNumber").value =
+          document.getElementById("docNumber").value;
+        document.getElementById("signInName").value =
+          document.getElementById("docType").value +
+          "_" +
+          document.getElementById("docNumber").value;
+      });
+
+    document
+      .getElementById("icon_see_passsword")
+      .addEventListener("click", function () {
+        const type =
+          document.getElementById("password").getAttribute("type") ===
+            "password"
+            ? "text"
+            : "password";
+        console.log(type);
+        document.getElementById("password").setAttribute("type", type);
+        iconMuestraPass.classList.toggle("icon-view-password");
+
+
+
+        document
+          .getElementById("togglePassword")
+          .classList.toggle("fa-eye-slash");
+      });
+
+    function randomVirtualKey() {
+      var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      var arr = arr.sort((a, b) => 0.5 - Math.random());
+
+      for (var i = 0; i < arr.length; i++) {
+        var select = `.key${i}`;
+        var targetDiv = (document.querySelector(select).innerHTML = arr[i]);
+      }
+    }
+
+    document
+      .querySelector(".newPassword_li")
+      .addEventListener("click", function () {
+        setTimeout(() => {
+          document.getElementById("VirtualKey").style.display = "block";
+        }, 500);
+      });
+
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutationRecord) {
+        document.getElementById("verifying_blurb").innerHTML = "";
+      });
+    });
+
+    var target = document.getElementById("requiredFieldMissing");
+    var target2 = document.getElementById("fieldIncorrect");
+    var target3 = document.getElementById("claimVerificationServerError");
+
+    observer.observe(target, {
+      attributes: true,
+      attributeFilter: ["style"],
+    });
+
+    observer.observe(target2, {
+      attributes: true,
+      attributeFilter: ["style"],
+    });
+
+    observer.observe(target3, {
+      attributes: true,
+      attributeFilter: ["style"],
+    });
+
+    randomVirtualKey();
+    $(document).ready(function () {
+      //setting form
+      $("#extension_docType").attr("value", $("#docType").val());
+      $("#signInName").attr("value", $("#docType").val() + "_");
+      $("#docNumber").attr("maxlength", "8");
+      $("#extension_docNumber").attr("maxlength", "8");
+
+      $("#password").attr("maxlength", "6");
+
+      $(".btn-virtual-key").on("click", function () {
+        var t = $(this).text();
+        var getValPass = $("#password").val();
+        var valToSet = getValPass + t;
+
+        if (getValPass.length < 6) {
+          $("#password").attr("value", valToSet);
+        }
+        $("#password").focus();
+      });
+      $(".del").on("click", function () {
+        if ($("#password").val().length > 0) {
+          $("#password").attr(
+            "value",
+            $("#password")
+              .val()
+              .substring(0, $("#password").val().length - 1)
+          );
+        }
+
+        if ($("#password").val().length == 0) {
+          document
+            .getElementById("password_label")
+            .classList.remove("floating-label-active");
+        }
+      });
+
+      $(".clean").on("click", function () {
+        $("#password").attr("value", "");
+        document
+          .getElementById("password_label")
+          .classList.remove("floating-label-active");
+      });
+    });
+
+    ///////////////////////////////
+    var Floaty = function Floaty() {
+      function onFocus1() {
+        setLabelActive1(this.floatingLabel);
+      }
+
+      function onBlur1() {
+        setLabel1(this);
+      }
+
+      function setLabelActive1(label) {
+        label.classList.add("floating-label-active");
+      }
+
+      function setLabelInactive1(label) {
+        label.classList.remove("floating-label-active");
+      }
+
+      function setLabel1() {
+        var input =
+          arguments.length > 0 && arguments[0] !== undefined
+            ? arguments[0]
+            : {};
+
+        if (input.value && input.value.length) {
+          setLabelActive1(input.floatingLabel);
+        } else {
+          setLabelInactive1(input.floatingLabel);
+        }
+      }
+
+      var allInputs = document.querySelectorAll(".reg-input");
+      allInputs.forEach(function (input) {
+        var currentInput = input;
+        var currentLabel = currentInput.nextElementSibling;
+        input.floatingLabel = currentLabel;
+        input.addEventListener("focus", onFocus1);
+        input.addEventListener("blur", onBlur1);
+        setLabel1(input);
+      });
+    };
+
+    Floaty();
+  </script>
+
+  <script
+    src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=6LeDueUgAAAAAOdDAoxygSMcksJ3HrOaiOF7dIz2"
+    async defer></script>
+  <script>
+    function onloadCallback() {
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6LeDueUgAAAAAOdDAoxygSMcksJ3HrOaiOF7dIz2", {
+            action: "homepage",
+          })
+          .then(function (token) {
+            console.log(token);
+            document.getElementById(
+              "extension_CaptchaUserResponseToken"
+            ).value = token;
+          });
+      });
+    }
+    document.getElementById("btn_prev_init_sesion").onclick = function (e) {
+      e.preventDefault();
+      onloadCallback();
+      document.getElementById("continue").click();
+      if (inputNroDoc.value.length < 8) {
+        inputError.innerHTML = "Cantidad de caracteres no válidos"
+        for (let descInput of descriptionInput) {
+          descInput.style.color = '#E63780';
+        }
+        for (let floatLabel of regFloatingLabel) {
+          floatLabel.classList.add("reg-floating-label-error")
+        }
+        for (let regInputs of regInput) {
+          regInputs.classList.add("reg-input-error")
+        }
+      }
+
+    };
+
+  </script>
+</body>
+
 </html>

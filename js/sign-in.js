@@ -58,17 +58,17 @@ function floatyLabel() {
 
 /* Button eye toggle and change type input */
 function toogleTypeInputEye1(inputPassId, eyeToogleId) {
-    try{
+    try {
         const eyeToogle = document.getElementById(eyeToogleId);
         const inputPass = document.getElementById(inputPassId);
-        if(inputPass.type === 'password') {
+        if (inputPass.type === 'password') {
             inputPass.type = 'text'
             eyeToogle.classList.add('show');
         } else {
             inputPass.type = 'password'
             eyeToogle.classList.remove('show');
         }
-    } catch(err) {
+    } catch (err) {
         console.log(err)
     }
 }
@@ -76,18 +76,18 @@ function toogleTypeInputEye1(inputPassId, eyeToogleId) {
 
 /* Button popup */
 function openPopup() {
-    if(!dropPopup.classList.contains('open-popup')) {
+    if (!dropPopup.classList.contains('open-popup')) {
         dropPopup.classList.add('open-popup')
     } else {
         dropPopup.classList.remove('open-popup')
     }
 }
-if(document.getElementById('btn-dropdwon') 
-&& document.getElementById('btn-dropdwon').length > 0
-&& document.getElementById('reg-popup-dropdown') 
-&& document.getElementById('reg-popup-dropdown').length > 0 
-&& document.getElementById('reg-btn-close') 
-&& document.getElementById('reg-btn-close').length > 0) {
+if (document.getElementById('btn-dropdwon')
+    && document.getElementById('btn-dropdwon').length > 0
+    && document.getElementById('reg-popup-dropdown')
+    && document.getElementById('reg-popup-dropdown').length > 0
+    && document.getElementById('reg-btn-close')
+    && document.getElementById('reg-btn-close').length > 0) {
     const buttonPopup = document.getElementById('btn-dropdwon');
     const dropPopup = document.getElementById('reg-popup-dropdown');
     const buttonClosePopup = document.getElementById('reg-btn-close');

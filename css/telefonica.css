@@ -8,12 +8,12 @@
  */
 
 :root {
-  --blue: #007bff;
+  --blue: #019df4;
   --trasnparent: var(--trasnparent);
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --red: #dc3545;
+  --red: #e63780;
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #28a745;
@@ -3620,9 +3620,6 @@ input[type="reset"].btn-block,
 input[type="submit"].btn-block {
   width: 100%;
 }
-
-
-
 
 .collapse:not(.show) {
   display: none;
